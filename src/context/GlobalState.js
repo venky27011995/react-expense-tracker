@@ -5,7 +5,6 @@ import { AppReducer } from './AppReducer'
 const initialState = {
     transactions : []
 }
-
 // Create Context
 export const GlobalContext = createContext(initialState);
 

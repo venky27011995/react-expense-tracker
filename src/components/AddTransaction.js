@@ -14,10 +14,17 @@ export const AddTransaction = () => {
             text: text,
             amount: Number(amount)
         }
+        // const oldTransaction = {
+        //     id: Math.floor(Math.random() * 100000000),
+        //     text: 'hai',
+        //     amount: Number(500)
+        // }
         addTransaction(newTransaction);
+        let localStorageArray =[newTransaction];
+        // localStorageArray.push(newTransaction)
+        localStorage.setItem(newTransaction.text,JSON.stringify(localStorageArray));
         setText('');
         setAmount('');
-
     }
 
     return (
